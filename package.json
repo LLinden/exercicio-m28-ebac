@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "webpack",
-    "test": "k6 run k6-ebac-tests/simulations/user.test.js"
+    "test": "k6 run ./k6-ebac-tests/dist/user.test.js"
   },
   "keywords": [],
   "author": "",

@@ -8,7 +8,7 @@ module.exports = {
     user: './k6-ebac-tests/simulations/user.test.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'), // eslint-disable-line
+    path: path.resolve(__dirname, './k6-ebac-tests/dist'), // eslint-disable-line
     libraryTarget: 'commonjs',
     filename: '[name].test.js',
   },
