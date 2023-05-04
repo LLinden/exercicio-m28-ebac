@@ -1,8 +1,7 @@
 import http from "k6/http";
 
 export default class Login {
-  // variável privada
-  #token;
+  token;
 
   access(user, pass) {
     let response = http.post(
@@ -20,13 +19,13 @@ export default class Login {
         }
       )
     );
-    this.#token = response.json("accessToken");
+    this.token = response.json("accessToken");
     check(request, {
       "status deve ser 201": (r) => r.status === 201,
     });
   }
 
   getToken() {
-    return this.#token;
+    return this.token;
   }
 }
